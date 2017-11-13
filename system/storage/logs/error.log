@@ -1,0 +1,3 @@
+2017-11-09 22:53:26 - PHP Notice:  Undefined index: email in D:\OpenServer\OpenServer\domains\open-cart\catalog\controller\information\partnership.php on line 21
+2017-11-09 22:53:26 - PHP Notice:  Undefined index: company in D:\OpenServer\OpenServer\domains\open-cart\catalog\controller\information\partnership.php on line 24
+2017-11-09 22:53:26 - PHP Notice:  Undefined index: tax_form in D:\OpenServer\OpenServer\domains\open-cart\catalog\controller\information\partnership.php on line 27

@@ -1,0 +1,85 @@
+{{ header }}
+
+<div id="information-contact" class="container">
+    <ul class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+        <li>
+            <a href ="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
+        </li>
+        {% endfor %}
+
+    </ul>
+    <div class="row">
+        <div id="content" class="col-sm-12">
+            <h1>{{ heading_title }}</h1>
+            {% if success is defined %}
+                {{ success }}
+            {% endif %}
+            <form action="{{ action }}" method="post" enctype="multipart/form-data" class="form-horizontal" >
+                <fieldset>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-name">{{ entry_name }}</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="name" value="{{ isset_name }}" id="input-name" class="form-control" />
+
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-name">{{ entry_email }}</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="email" value="{{ isset_email }}" id="input-email" class="form-control" />
+
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-name">{{ entry_company }}</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="company"  value="" id="input-company" class="form-control" />
+
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-name">{{ entry_age }}</label>
+                        <div class="col-sm-10">
+                            <input type="number" name="age" max="100" value="" id="input-age" class="form-control" />
+
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-name">{{ entry_tax_form }}</label>
+                        <div class="col-sm-10">
+                            <select name="tax_form">
+                                <option>Physical</option>
+                                <option>Juridical</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-file">{{ entry_file }}</label>
+                        <div class="col-sm-10">
+                            <input type="file" name="file"  id="input-file"  />
+
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-2 control-label" for="input-name">{{ entry_comment }}</label>
+                        <div class="col-sm-10">
+                            <textarea  name="comment" rows="5"  id="input-comment" class="form-control"></textarea>
+
+                        </div>
+                    </div>
+
+                </fieldset>
+                <div class="button">
+                    <div class="pull-right">
+                        <input type="submit" class="btn" value="{{ button_submit }}">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{{ footer }}
