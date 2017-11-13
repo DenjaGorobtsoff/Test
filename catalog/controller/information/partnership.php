@@ -18,10 +18,10 @@ class ControllerInformationPartnership extends Controller{
             if(!$this->request->post['name']){
                 $data['error']['name'] = $this->language->get('error_name');
             }
-            /*if(!$this->request->post['email']){
+            if(!$this->request->post['email']){
                 $data['error']['email'] = $this->language->get('error_email');
-            }*/
-            if(!empty($this->request->post['company'])){
+            }
+            if(!$this->request->post['company']){
                 $data['error']['company'] = $this->language->get('error_company');
             }
             if(!$this->request->post['tax_form']){
